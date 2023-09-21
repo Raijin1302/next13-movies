@@ -2,6 +2,7 @@ import ModalPlayerTrailer from "@/components/ModalPlayerTrailer"
 import { Cast, Crew } from "@/types"
 import Link from "next/link"
 import Image from "next/image"
+import ModalImages from "@/components/ModalImages"
 interface pageProps {
   params: {
     movieId: string
@@ -129,11 +130,7 @@ const page = async ({ params }: pageProps) => {
           </div>
         </div>
       </div>
-      <div className="movies-images">
-        <div className="container mx-auto px-4 py-16">
-          <h2 className="text-4xl font-semibold ml-2 lg:ml-9">Images</h2>
-        </div>
-      </div>
+      <ModalImages movieId={movie.id} images={movie.images} />
     </>
   )
 }
