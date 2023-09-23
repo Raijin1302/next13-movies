@@ -130,7 +130,19 @@ const page = async ({ params }: pageProps) => {
           </div>
         </div>
       </div>
-      <ModalImages movieId={movie.id} images={movie.images} />
+
+      <div className="movies-images">
+        <div className="container mx-auto px-4 py-16">
+          <h2 className="text-4xl font-semibold ml-2 lg:ml-9">Images</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {movie.images.map((image: any) => (
+              <div className="mt-8 mx-auto">
+                <ModalImages movieId={movie.id} image={image} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </>
   )
 }
