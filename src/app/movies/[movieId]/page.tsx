@@ -1,8 +1,8 @@
-import ModalPlayerTrailer from "@/components/ModalPlayerTrailer"
+import ModalPlayerTrailer from "@/components/[movieId]/ModalPlayerTrailer"
 import { Cast, Crew } from "@/types"
 import Link from "next/link"
 import Image from "next/image"
-import ModalImages from "@/components/ModalImages"
+import ModalImages from "@/components/[movieId]/ModalImages"
 interface pageProps {
   params: {
     movieId: string

@@ -21,7 +21,7 @@ const MovieList: FC<MovieListProps> = async ({}) => {
   return (
     <div className="container mx-auto px-4 pt-16 mb-16">
       <div className="popular-movies">
-        <h2 className="uppercase tracking-wider text-orange-500 text-lg font-semibold">
+        <h2 className="relative uppercase tracking-wider text-orange-500 text-lg font-semibold mt-16">
           Popular Movies
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-4 md:gap-x-4 sm:gap-x-2 py-6 ">

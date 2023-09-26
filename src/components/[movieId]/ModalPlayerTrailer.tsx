@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation"
 import { FC, useEffect, useRef, useState } from "react"
 import { X } from "lucide-react"
-import { Button } from "./ui/Button"
+import { Button } from "../ui/Button"
 interface ModalPlayerTrailerProps {
   movieId: string
   video: string

@@ -1,10 +1,9 @@
 "use client"
-import { Images } from "@/types"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { FC, useState } from "react"
-import { Button } from "./ui/Button"
+import { Button } from "../ui/Button"
 import { X } from "lucide-react"
 
 interface ModalImagesProps {
