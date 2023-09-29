@@ -51,7 +51,7 @@ const page = async ({ params }: pageProps) => {
     <>
       <div className="movie-info border-b border-gray-800 py-7">
         <div className="container mx-auto px-4 py-32 flex flex-col md:flex-row">
-          <div className="lg:flex-none flex relative aspect-square w-64 lg:w-96 h-[500px] mx-auto  ">
+          <div className="lg:flex-none flex relative aspect-square w-64 lg:w-96 h-[500px] mx-auto ">
             <Image
               src={movie.poster_path}
               alt={`${movie.title} Poster`}
