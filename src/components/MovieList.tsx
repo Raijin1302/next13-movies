@@ -1,7 +1,6 @@
 import { FC } from "react"
 import MovieCard from "./MovieCard"
-import { Movie } from "@/types/movie"
-
+import { Movie } from "@/types"
 interface MovieListProps {}
 
 async function getPopularMoviesResponse() {
