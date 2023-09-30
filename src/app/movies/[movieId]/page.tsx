@@ -116,7 +116,7 @@ const page = async ({ params }: pageProps) => {
                     fill
                   />
                 </Link>
-                <div className="relative mt-2 text-center  top-full">
+                <div className="relative mt-2 text-center top-full">
                   <Link
                     href={`/people/${cast.id}`}
                     className="text-lg hover:text-gray-300"

@@ -97,7 +97,7 @@ const page = async ({ params }: pageProps) => {
             id="people-poster"
             fill
           />
-          <ul className="flex items-center mt-4">
+          <ul className="flex items-center mt-9 absolute md:right-36  right-64 -bottom-10 ">
             {social.facebook_id && (
               <li>
                 <Link
@@ -148,9 +148,9 @@ const page = async ({ params }: pageProps) => {
             )}
           </ul>
         </div>
-        <div className="md:ml-24">
+        <div className="md:ml-24 mt-16 md:mt-0">
           <h2 className="text-4xl mt-4 md:mt-0 font-semibold">{people.name}</h2>
-          <div className="flex flex-wrap items-center text-gray-400 text-sm">
+          <div className="flex flex-wrap items-center text-gray-400 text-sm my-3">
             <svg
               className="fill-current text-gray-400 hover:text-white w-4"
               viewBox="0 0 448 512"
@@ -161,6 +161,31 @@ const page = async ({ params }: pageProps) => {
               {people.birthday} ({people.age} years old) in{" "}
               {people.place_of_birth}
             </span>
+          </div>
+          <p className="text-gray-300 mt-8 ">{people.biography}</p>
+          <h4 className="font-semibold mt-12">Known For</h4>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-8 md:gap-x-8 py-4">
+            {knownFor.map((movie: any) => (
+              <div className="mt-4 my-8 relative w-44 h-[400px] lg:h-[300px] mx-auto">
+                <Link href={movie.linkToPage}>
+                  <Image
+                    src={movie.poster_path}
+                    alt={movie.title}
+                    className="thumbnail hover:opacity-75 transition ease-in-out duration-150"
+                    id={`movie-poster-${movie.id}`}
+                    fill
+                  />
+                </Link>
+                <div className="relative mt-2 text-center top-full">
+                  <Link
+                    href={movie.linkToPage}
+                    className="text-sm leading-normal block text-gray-400 hover:text-white mt-1"
+                  >
+                    {movie.title}
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
